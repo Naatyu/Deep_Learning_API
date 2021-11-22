@@ -7,7 +7,7 @@ class Layers :
 	class Dense :
 
 		def __init__(self,inputs, neurons):
-			self.weights = 0.01*np.random.randn(inputs,neurons)
+			self.weights = np.random.randn(inputs,neurons) / np.sqrt(inputs/2) # modified Xavier Initialisation due to ReLU (He et al. 2015)
 			self.biases = np.zeros((1,neurons))
 
 		def forward_pass(self, inputs):

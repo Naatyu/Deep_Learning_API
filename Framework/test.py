@@ -1,4 +1,4 @@
-from API import *
+from Personnal_framework import *
 import numpy as np
 import nnfs
 from nnfs.datasets import spiral_data
